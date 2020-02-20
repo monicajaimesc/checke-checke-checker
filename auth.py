@@ -17,8 +17,10 @@ def main():
     s = r.Session()
     res = s.post('https://intranet.hbtn.io/users/auth_token.json', data=data)
     token = res.json().get('auth_token')
-    status = s.get('https://intranet.hbtn.io/users/me.json?auth_token=' + token)
-    print(status.json())
+    profile = s.get('https://intranet.hbtn.io/users/me.json?auth_token=' + API_KEY)
+    # Get a project
+    # project = s.get('https://intranet.hbtn.io/projects/' + argv[2] + '.json?auth_token=' + API_KEY)
+    print(profile.json())
 
 if __name__ == '__main__':
     main()
