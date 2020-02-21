@@ -76,12 +76,13 @@ def task():
 #
     check = requests.post('https://intranet.hbtn.io/tasks/' + data.get('task_id') + '/start_correction.json?auth_token=' + str(data.get('auth_token')))
 
-    time.sleep(120)
-    
-    result = requests.get('https://intranet.hbtn.io/correction_requests/' + str(check.json().get('id')) + '.json?auth_token=' + str(data.get('auth_token')))
-
-    return jsonify(result.json())
-
+    while True:
+        time.sleep(2)
+        result = requests.get('https://intranet.hbtn.io/correction_requests/' + str(check.json().get('id')) + '.json?auth_token=' + str(data.get('auth_token')))
         
-    
-    
+        if (result.json().get('status') == 'Done'):
+            return jsonify(result.json())
+        elif (result.json().get('status') == 'Fail'):
+            return jsonify(result.json())
+        else:
+            pass
