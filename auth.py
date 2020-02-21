@@ -7,8 +7,8 @@ from sys import argv
 
 def main():
     email = argv[1]
-    pwd = getpass()
-    api_key = input('enter api key: ')
+    pwd = 'Megustaelvino5' #getpass()
+    api_key = '6270b10d793dec57b222edd328ecfeaf' #input('enter api key: ')
     task = input('task number: ')
     data = {
             'api_key': api_key,
@@ -27,7 +27,7 @@ def main():
     check = s.post('https://intranet.hbtn.io/tasks/' + task + '/start_correction.json?auth_token=' + str(token))
     #print(check.json())
     
-    time.sleep(50)
+    time.sleep(20)
     
     result = s.get('https://intranet.hbtn.io/correction_requests/' + str(check.json().get('id')) + '.json?auth_token=' + str(token))
     #for task in project.json().get('tasks'):
