@@ -4,6 +4,13 @@
 
 checke-checke-checker requires [Node.js](https://nodejs.org/) v10+ to run.
 
+Git clone
+
+```sh
+$ git clone git@github.com:monicajaimesc/checke-checke-checker.git
+$ cd checke-checke-checker
+```
+
 ### Development
 
 Open your favorite Terminal and run these commands.
