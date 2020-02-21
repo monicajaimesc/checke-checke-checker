@@ -9,7 +9,6 @@ body {
     padding: 30px 45px 100px 42px;
     max-width: 660px;
     margin: 100px auto 20px;
-    background: #FFF;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
@@ -22,38 +21,62 @@ body {
 	border-bottom: 1px solid #CCC;
 	position: relative;
 }
-.button {
-    margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: 20px;
-    margin-bottom: -100;
-    background-color: #74B3CC;
-    border-radius:7px;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Arial;
-    font-size:28px;
-    padding:27px 68px;
-    text-decoration:none;
-    text-shadow:0px -1px 3px #91E0FF;
-    position: relative;
+body .btn,
+  body .btn2 {
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background-size: 600%;
+    -webkit-animation: anime 16s linear infinite;
+    animation: anime 16s linear infinite;
     margin-left: 200px;
     margin-right: 200px;
-    
-  
+    margin-top: 40px;
   }
-button:hover {
-	background-color: #91E0FF;
+  body .btn2 {
+    position: absolute;
+    margin-top: -70px;
+    z-index: -1;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    opacity: 0.8;
+  }
+  .container {
+    padding: 30px 45px 50px 42px;
+    border:2px solid #CC71F7;
 }
-.button:active {
-	position:relative;
-    top:1px;
-}
+  @-webkit-keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 .caja {
     grid-template-columns: auto auto;
     grid-template-rows: -5px -5px; 
     height: 165px;
+    align-items: center;
+    color: wheat;
     }
 .circulo {
     margin-top: 20px;
