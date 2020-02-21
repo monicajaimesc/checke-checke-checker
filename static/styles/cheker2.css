@@ -1,0 +1,66 @@
+body {
+    background: #2d2c41;
+	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  body .btn,
+  body .btn2 {
+    width: 300px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    color: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    background: linear-gradient(-45deg, #ffa63d, #ff3d77, #338aff, #3cf0c5);
+    background-size: 600%;
+    -webkit-animation: anime 16s linear infinite;
+    margin-left: 200px;
+    margin-right: 200px;
+    animation: anime 16s linear infinite;
+  }
+  body .btn2 {
+    position: absolute;
+    margin-top: -70px;
+    z-index: -1;
+    -webkit-filter: blur(30px);
+            filter: blur(30px);
+    opacity: 0.8;
+  }
+  .container {
+    padding: 30px 45px 50px 42px;
+    border:2px solid #CC71F7;
+}
+  @-webkit-keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes anime {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  h2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    color: blanchedalmond;
+
+  }
