@@ -14,7 +14,7 @@ host="0.0.0.0"
 port="5000"
 
 
-CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
+CORS(app, resources={r"/api/v1/*": {"origins": "*"}})
 
 def send_json_error(err, code):
     """
