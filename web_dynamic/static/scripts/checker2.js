@@ -13,18 +13,18 @@ function init(){
 
     $('#name').text(project.name)
 
-    console.log(project.tasks);
+    //console.log(project.tasks);
     project.tasks.forEach(function(values){
-        console.log(values);
+        //console.log(values);
         $('#render').append(render(values));
     });
 
     $('#render div.btn').click(function(){
-      const id = $(this).val();
+      const task_id = $(this).val();
       const key = localStorage.getItem('key');
 
       const data = {
-        'project_id' : project_id,
+        'task_id' : task_id,
         'auth_token' : key
       }
       $.ajax(
