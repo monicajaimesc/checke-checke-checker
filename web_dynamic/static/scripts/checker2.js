@@ -29,7 +29,7 @@ function init(){
       }
       $.ajax(
         {
-          'url':'http://0.0.0.0:5000/api/v1/task',
+          'url':'http://192.168.33.12:5000/api/v1/task',
           'method':'POST',
           'contentType':'application/json',
           'data': JSON.stringify(data),

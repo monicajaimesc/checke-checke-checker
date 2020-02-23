@@ -21,7 +21,7 @@ function init(){
         };
 
         $.ajax({
-            'url':'http://0.0.0.0:5000/api/v1/auth',
+            'url':'http://192.168.33.12:5000/api/v1/auth',
             'method':'POST',
             'data': JSON.stringify(data),
             'contentType':'application/json'
