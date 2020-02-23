@@ -27,7 +27,7 @@ function init(){
             'contentType':'application/json'
         })
         .done(function(data){
-            console.log(data);
+            //console.log(data);
             localStorage.setItem('key', data.auth_token);
             location.href = "project"
         })

@@ -1,6 +1,5 @@
 function init(){
-    console.log('checker1');
-
+    console.log("checker1");
     if (!localStorage.getItem('key')){
         location.href="registration";
     }
@@ -29,7 +28,7 @@ function init(){
             'contentType':'application/json',
             'data': JSON.stringify(data),
         }).done(function(data){
-            console.log(data);
+            //console.log(data);
 
             localStorage.setItem('project', JSON.stringify(data));
 
