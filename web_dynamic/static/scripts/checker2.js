@@ -24,7 +24,7 @@ function init(){
       const key = localStorage.getItem('key');
 
       const data = {
-        'project_id' : project_id,
+        'project_id' : id,
         'auth_token' : key
       }
       $.ajax(
